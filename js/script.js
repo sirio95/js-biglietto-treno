@@ -9,21 +9,21 @@ const discount_over = 0.4;
 age = parseInt(prompt("Scrivi qui quanti anni hai"));
 km = parseInt(prompt("Di quanti chilometri è la tratta da coprire?"));
 document.getElementById("km").innerHTML =`${km} chilometri`;
-document.getElementById("age").innerHTML = `${age} anni`
+document.getElementById("age").innerHTML = `${age} anni`;
 
 //Calcolo biglietto
 
 if(age<18){
     ticket= km * price * discount_under;
-    document.getElementById("discount").innerHTLM = "20%";
+    document.getElementById("discount").innerHTML = `20&percnt;`;    
 
 }else if(age>18 && age<65){
     ticket= km * price;
-    document.getElementById("discount").innerHTML = "nessuno sconto";
+    document.getElementById("discount").innerHTML = `nessuno sconto`;
 
 }else if(age>65){
     ticket= km * price * discount_over;
-    document.getElementById("discount").innerHTLM = "40%";
+    document.getElementById("discount").innerHTML = `40&percnt;`;
 }
 
 //Informazioni biglietto utente
