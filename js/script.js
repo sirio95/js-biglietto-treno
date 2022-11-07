@@ -1,5 +1,5 @@
 // Dichiarazione variabili
-let age, km, ticket;
+let age, km, ticket, ticket_human;
 const price = 0.21;
 const discount_under = 0.2;
 const discount_over = 0.4;
@@ -27,4 +27,5 @@ if(age<18){
 }
 
 //Informazioni biglietto utente
-document.getElementById("ticket").innerHTML =`${ticket} &euro;`;
+ticket_human = Math.round(ticket * 100) / 100;
+document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
