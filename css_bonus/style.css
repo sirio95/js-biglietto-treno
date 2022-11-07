@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:18px;
+}
+
+header{
+    width: 100%;
+    height:150px;
+    background-color: #a6160a;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+}
+
+nav img{
+    height: 120px;
+    width:auto;
+    box-shadow: 3px 3px #a6160a;
+    clip-path: circle();
+}
+
+nav a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 24px;
+    padding: 3px 7px;
+    background-color: blue;
+    border-radius: 25px;
+}
+
+main{
+    width:100%;
+    height: calc(100vh - 150px);
+}
+
+.biglietto{
+    background-color: #a6160a;
+    height:350px;
+    width:50%;
+    margin: 3% auto;
+}
+
+h1, h2{
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#km, #age, #discount, #ticket{
+    padding: 1% 1%;
+    background-color: #fff;
+    color:black;
+    border-radius: 25px;
+    border: 1px solid #000;
+}
