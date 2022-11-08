@@ -1,5 +1,5 @@
 // Dichiarazione variabili
-let age, km, ticket, ticket_human;
+let age, km, ticket, ticket_human, discounted, ticket_reduced;
 const price = 0.21;
 const discount_under = 0.2;
 const discount_over = 0.4;
@@ -14,7 +14,9 @@ document.getElementById("age").innerHTML = `${age} anni`;
 //Calcolo biglietto
 
 if(age<18){
-    ticket= km * price * discount_under;
+    ticket= km * price;
+    discounted = ticket * discount_under;
+    ticket_reduced= ticket - discounted;
     document.getElementById("discount").innerHTML = `20&percnt;`;    
 
 }else if(age>18 && age<65){
@@ -22,10 +24,12 @@ if(age<18){
     document.getElementById("discount").innerHTML = `nessuno sconto`;
 
 }else if(age>65){
-    ticket= km * price * discount_over;
+    ticket= km * price;
+    discounted= ticket * discount_over;
+    ticket_reduced= ticket - discounted; 
     document.getElementById("discount").innerHTML = `40&percnt;`;
 }
 
 //Informazioni biglietto utente
-ticket_human = Math.round(ticket * 100) / 100;
+ticket_human = Math.round(ticket_reduced * 100) / 100;
 document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
