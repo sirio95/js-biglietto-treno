@@ -18,18 +18,23 @@ if(age<18){
     discounted = ticket * discount_under;
     ticket_reduced= ticket - discounted;
     document.getElementById("discount").innerHTML = `20&percnt;`;    
+    ticket_human = Math.round(ticket_reduced * 100) / 100;
+    document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
 
 }else if(age>18 && age<65){
     ticket= km * price;
     document.getElementById("discount").innerHTML = `nessuno sconto`;
+    ticket_human = Math.round(ticket * 100) / 100;
+    document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
+
+
 
 }else if(age>65){
     ticket= km * price;
     discounted= ticket * discount_over;
     ticket_reduced= ticket - discounted; 
     document.getElementById("discount").innerHTML = `40&percnt;`;
+    ticket_human = Math.round(ticket_reduced * 100) / 100;
+    document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
 }
 
-//Informazioni biglietto utente
-ticket_human = Math.round(ticket_reduced * 100) / 100;
-document.getElementById("ticket").innerHTML =`${ticket_human} &euro;`;
